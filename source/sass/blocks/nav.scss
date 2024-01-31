@@ -1,0 +1,184 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @include vp-1023 {
+    gap: 16px;
+  }
+
+  @include vp-413 {
+    gap: 10px;
+  }
+}
+
+.nav__list {
+  @include clear-list;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @include vp-1023 {
+    gap: 16px;
+  }
+
+  @include vp-413 {
+    gap: 10px;
+  }
+}
+
+.nav__list-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 12px;
+
+  transition: color $trans-default;
+
+  @include hover-focus {
+    .nav__list-item-text {
+      color: $color-site-primary;
+    }
+  }
+
+  @include vp-413 {
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+    @include hover-focus {
+      color: $color-site-primary;
+    }
+  }
+}
+
+.nav__list-item-text {
+  margin: 0;
+
+  transition: color $trans-default;
+
+  @include vp-413 {
+    display: none;
+  }
+}
+
+.nav__list-item-qty {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 12px;
+  height: 12px;
+  padding: 2px;
+
+  font-size: 8px;
+  line-height: 1;
+  color: $color-default-white;
+
+  background-color: $color-site-primary;
+  border-radius: 4px;
+
+  @include vp-413 {
+    top: 4px;
+  }
+}
+
+.nav__user {
+  position: relative;
+
+  @include hover-focus {
+    .nav__user-menu {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &:focus-within {
+    .nav__user-menu {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.nav__user-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  margin: 8px;
+  padding: 0 8px;
+
+  background-color: $color-transparent;
+  border: none;
+  cursor: pointer;
+
+  transition: color $trans-default;
+
+  @include hover-focus {
+    color: $color-site-primary;
+  }
+
+  @include vp-1023 {
+    margin: 3px 0;
+    padding: 5px;
+  }
+
+  @include vp-413 {
+    margin: 8px 0;
+    padding: 0;
+  }
+}
+
+.nav__user-avatar {
+  width: 40px;
+  height: 40px;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+
+  transition: outline-color $trans-default;
+
+  @include vp-1023 {
+    outline: 1px solid $color-transparent;
+  }
+}
+
+.nav__user-name {
+  margin: 0;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.nav__user-btn-icon {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.nav__user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  width: max-content;
+  max-width: 250px;
+  padding: 20px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  background-color: $color-default-white;
+  border-radius: 4px;
+  box-shadow: $header-user-menu-shadow;
+}

@@ -1,6 +1,7 @@
 :root {
   --container-max-width: 1240px;
   --container-padding-x: 16px;
+  --header-height: 72px;
   --section-gap: 120px;
   --section-half-gap: 80px;
 
@@ -76,8 +77,14 @@ section {
 }
 
 a {
+  text-decoration: none;
   color: inherit;
+
   transition: color $trans-default;
+
+  @include hover-focus {
+    color: $color-site-primary;
+  }
 }
 
 img,

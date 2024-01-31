@@ -11,17 +11,33 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
 $color-charcoal:                    #414141;
-
 $color-floral-white:                #fbf8ec;
+
+$color-outrageous-orange:           #ff6633;
+
+$color-mantis:                      #70c05b;
+$color-panache:                     #e5ffde;
 
 // Project colors
 
+$color-site-primary:                $color-outrageous-orange;
+$color-site-secondary:              $color-mantis;
+$color-site-secondary-muted:        $color-panache;
 $color-site-txt:                    $color-charcoal;
 $color-site-bg:                     $color-floral-white;
+
+$color-header-bg:                   $color-default-white;
 
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+// Shadow
+
+$header-shadow:
+  2px 4px 8px 0 rgba($color: $color-default-black, $alpha: 0.1);
+$header-user-menu-shadow:
+  0 0 8px 0 rgba($color: $color-default-black, $alpha: 0.1);
 
 // Typography
 // ---------------------------------

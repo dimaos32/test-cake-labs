@@ -1,5 +1,8 @@
-import { mobileVhFix } from './utils/mobile-vh-fix.js';
-import { initModals } from './modules/modals/init-modals';
+import { mobileVhFix } from './utils/mobile-vh-fix';
+
+// import { initModals } from './modules/modals/init-modals';
+import { initCatalogMenu } from './modules/init-catalog-menu';
+import { initToggleSearchForm } from './modules/init-toggle-search-form';
 
 // ---------------------------------
 
@@ -16,7 +19,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
+    // initModals();
+    initCatalogMenu();
+    initToggleSearchForm();
   });
 });
 

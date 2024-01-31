@@ -1,14 +1,24 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-width: 150px;
+  width: fit-content;
+  min-height: 40px;
+  padding: 7px;
 
-  color: yellow;
+  color: $color-site-secondary;
 
-  background-color: blue;
-  border: none;
+  background-color: $color-site-secondary-muted;
+  border: 1px solid $color-site-secondary-muted;
+  border-radius: 4px;
   cursor: pointer;
 
-  transition: opacity $trans-default;
+  transition:
+    color $trans-default,
+    background-color $trans-default,
+    border-color $trans-default;
 
   &:disabled {
     opacity: 0.5;
@@ -17,6 +27,58 @@
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    color: $color-default-white;
+
+    background-color: $color-site-secondary;
+    border-color: $color-site-secondary;
+  }
+
+  &--catalog {
+    min-width: 140px;
+
+    color: $color-default-white;
+
+    background-color: $color-site-secondary;
+    border-color: $color-site-secondary;
+
+    span {
+      flex-grow: 1;
+
+      text-align: center;
+    }
+
+    @include hover-focus {
+      color: $color-default-white;
+
+      background-color: $color-site-primary;
+      border-color: $color-site-primary;
+    }
+
+    @include vp-1023 {
+      width: 40px;
+      min-width: unset;
+      span {
+        display: none;
+      }
+    }
+  }
+
+  &--icon {
+    width: 40px;
+    min-width: unset;
+    height: 40px;
+    min-height: unset;
+    padding: 0;
+
+    color: $color-site-txt;
+
+    background-color: $color-transparent;
+    border: none;
+
+    @include hover-focus {
+      color: $color-site-primary;
+
+      background-color: $color-transparent;
+    }
   }
 }

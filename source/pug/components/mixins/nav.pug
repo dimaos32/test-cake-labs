@@ -1,0 +1,40 @@
+mixin nav()
+
+  -
+    const navList = [
+      {
+        icon: ["icon-heart", 24, 24],
+        text: "Избранное",
+      },
+      {
+        icon: ["icon-package", 24, 24],
+        text: "Заказы",
+      },
+      {
+        icon: ["icon-cart", 24, 24],
+        text: "Корзина",
+        qty: "1",
+      },
+    ]
+
+  nav.header__nav.nav
+    ul.nav__list
+      each item in navList
+        - const { icon, text, qty } = item
+        li.nav__list-item
+          +link({ href: "#" }).nav__list-link
+            +icon(...icon).nav__list-item-icon
+            p.nav__list-item-text=text
+            if qty
+              span.nav__list-item-qty= qty
+    .nav__user
+      button.nav__user-btn(type="button", aria-label="Показать меню пользователя")
+        +img("content", "avatar", "jpg", 40, 40, "Аватар Алексея").nav__user-avatar
+        p.nav__user-name Алексей
+        +icon("icon-chevron", 24, 24).nav__user-btn-icon
+      .nav__user-menu
+        ul
+          li Пункт меню
+          li Пункт меню
+          li Пункт меню
+          li Пункт меню
