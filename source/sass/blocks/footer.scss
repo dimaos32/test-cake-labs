@@ -1,5 +1,145 @@
 .footer {
-  padding: 40px 0;
+  min-height: 124px;
+  padding: 24px 0;
 
-  background-color: blue;
+  background-color: $color-footer-bg;
+  background-image: url("../img/site/pattern-footer.png");
+  background-size: 126px 126px;
+  background-repeat: repeat;
+  background-position: center;
+
+  @include vp-1023 {
+    min-height: 120px;
+    padding: 32px 0;
+  }
+}
+
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px 80px;
+
+  @include vp-1023 {
+    gap: 20px 60px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+.footer__menu {
+  @include clear-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px 40px;
+
+  font-size: 12px;
+
+  @include vp-1023 {
+    gap: 8px 16px;
+    max-width: 400px;
+  }
+
+  @include vp-767 {
+    justify-content: center;
+  }
+}
+
+.footer__contacts {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px 40px;
+
+  @include vp-1023 {
+    gap: 24px;
+  }
+}
+
+.footer__social {
+  @include clear-list;
+
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  width: 144px;
+
+  @include vp-1023 {
+    gap: 8px;
+    width: 56px;
+  }
+}
+
+.footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+
+  @include hover-focus {
+    .footer__social-icon {
+      filter: drop-shadow($footer-social-link-shadow);
+    }
+  }
+}
+
+.footer__social-icon {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.footer__address {
+  font-style: normal;
+}
+
+.footer__phone {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  @include vp-1023 {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.footer__phone-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__designer {
+  margin: 0;
+
+  font-size: 12px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  @include vp-1023 {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.footer__designer-link {
+  display: inline-flex;
 }

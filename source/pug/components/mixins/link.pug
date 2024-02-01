@@ -8,13 +8,6 @@ mixin link(options = {})
   - const ariaLabel = options.ariaLabel || false;
   - const file = options.isFile || false;
 
-  #{tag}(
-    href=href,
-    target=target,
-    rel=rel,
-    type=type,
-    aria-label=ariaLabel,
-    download=file
-  )&attributes(attributes)!= text
+  #{tag}(href=href, target=target, rel=rel, type=type, aria-label=ariaLabel, download=file)&attributes(attributes)!= text
     if block
       block

@@ -11,7 +11,9 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
 $color-charcoal:                    #414141;
+
 $color-floral-white:                #fbf8ec;
+$color-off-yellow:                   #f9f4e2;
 
 $color-outrageous-orange:           #ff6633;
 
@@ -28,6 +30,8 @@ $color-site-bg:                     $color-floral-white;
 
 $color-header-bg:                   $color-default-white;
 
+$color-footer-bg:                   $color-off-yellow;
+
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
@@ -38,6 +42,8 @@ $header-shadow:
   2px 4px 8px 0 rgba($color: $color-default-black, $alpha: 0.1);
 $header-user-menu-shadow:
   0 0 8px 0 rgba($color: $color-default-black, $alpha: 0.1);
+$footer-social-link-shadow:
+  0 0 4px $color-site-primary;
 
 // Typography
 // ---------------------------------

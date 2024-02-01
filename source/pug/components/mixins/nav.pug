@@ -24,7 +24,7 @@ mixin nav()
         li.nav__list-item
           +link({ href: "#" }).nav__list-link
             +icon(...icon).nav__list-item-icon
-            p.nav__list-item-text=text
+            p.nav__list-item-text= text
             if qty
               span.nav__list-item-qty= qty
     .nav__user

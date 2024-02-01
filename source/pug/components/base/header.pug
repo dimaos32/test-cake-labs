@@ -14,6 +14,6 @@ mixin header(headerMods, currentUrl)
               +btn({ iconBefore: ["icon-search", 24, 24] }).btn--icon.header__search-toggle(type="submit", aria-label="Показать форму поиска")
               form.header__search-form
                 label.visually-hidden(for="catalog-search") Поиск товара
-                input(type="search", id="catalog-search", placeholder="Найти товар").header__search-input
+                input.header__search-input(type="search", id="catalog-search", placeholder="Найти товар")
                 +btn({ iconBefore: ["icon-search", 24, 24] }).btn--icon.header__search-btn(type="submit", aria-label="Искать")
           +nav().header__nav.nav

@@ -1,3 +1,57 @@
 mixin footer(footerMods)
+
+  -
+    const menu = [
+      { text: "О компании", href: "#" },
+      { text: "Контакты", href: "#" },
+      { text: "Вакансии", href: "#" },
+      { text: "Статьи", href: "#" },
+      { text: "Политика обработки персональных данных", href: "#" },
+    ]
+
+    const social = [
+      {
+        href: "https://www.instagram.com/",
+        icon: ["content", "social-instagram", "svg", 24, 24, "Инстаграм"],
+        isExternal: true,
+        },
+      {
+        href: "https://vk.com/feed",
+        icon: ["content", "social-vk", "svg", 24, 24, "ВК"],
+        isExternal: true,
+        },
+      {
+        href: "https://www.facebook.com/",
+        icon: ["content", "social-facebook", "svg", 24, 24, "Фэйсбук"],
+        isExternal: true,
+        },
+      {
+        href: "https://ok.ru/",
+        icon: ["content", "social-ok", "svg", 24, 24, "Однокласники"],
+        isExternal: true,
+        },
+    ]
+
   footer.footer(class=footerMods)
     .container
+      .footer__inner
+        ul.footer__menu
+          each link in menu
+            li.footer__menu-item
+              +link(link).footer__menu-link
+        .footer__contacts
+          ul.footer__social
+            each link in social
+              - const { icon } = link
+              li.footer__social-item
+                +link(link).footer__social-link
+                  +img(...icon).footer__social-icon
+          address.footer__address
+            p.footer__phone
+              +link({ href: "tel:+78007773333" }).footer__phone-link
+                +icon("icon-phone", 24, 24)
+                span 8 800 777 33 33
+            p.footer__designer
+              span Дизайн
+              +link({ href: "#", isExternal: true }).footer__designer-link
+                +icon("logo-designer", 100, 10)
