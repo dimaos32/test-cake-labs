@@ -66,7 +66,7 @@ body {
 section {
   margin: var(--section-gap) 0;
 
-  .hero + &,
+  .banner + &,
   &:first-child {
     margin-top: var(--section-half-gap);
   }
