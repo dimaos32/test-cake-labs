@@ -1,0 +1,27 @@
+mixin product-card({ link, cover, discount, clubPrice, price, title, rating, isFavorite })
+
+  article.product-card
+    +link(link).product-card__link
+      .product-card__cover
+        +img(...cover).product-card__cover-img
+        if discount
+            p.product-card__badge
+              span.visually-hidden скидка:
+              = discount
+      .product-card__data
+        .product-card__price-box
+          if clubPrice
+            p.product-card__price
+              span.product-card__price-value= clubPrice
+              span.product-card__price-type С картой
+            p.product-card__old-price
+              span.product-card__price-value= price
+              span.product-card__price-type Обычная
+          else
+            p.product-card__price
+              span.product-card__price-value= price
+        h3.product-card__title= title
+        +star-rating(rating).product-card__rating
+    .product-card__action-wrapper
+      +btn({ text: "В корзину"}).btn--in-card.product-card__action-btn
+    +btn({ iconBefore: ["icon-heart", 24, 24] }).btn--icon.product-card__favorite-btn(class= {"is-favorite": isFavorite})

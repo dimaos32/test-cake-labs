@@ -1,0 +1,17 @@
+mixin star-rating(rating = 5)
+
+  .star-rating&attributes(attributes)
+    .star-rating__background
+      .star-rating__stars
+        +icon("star", 16, 16)
+        +icon("star", 16, 16)
+        +icon("star", 16, 16)
+        +icon("star", 16, 16)
+        +icon("star", 16, 16)
+    .star-rating__rating(style=`width: ${rating * 20}%`)
+      .star-rating__stars
+        +icon("star", 16, 16)
+        +icon("star", 16, 16)
+        +icon("star", 16, 16)
+        +icon("star", 16, 16)
+        +icon("star", 16, 16)

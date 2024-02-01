@@ -1,9 +1,15 @@
 .banner {
+  margin: 0;
+
   background-color: $color-banner-bg;
   background-image: url("../img/site/pattern-banner.svg");
   background-size: 252px 252px;
   background-repeat: repeat;
   background-position: center;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .banner__inner {
@@ -63,9 +69,7 @@
 .banner__title {
   margin: 0;
 
-  font-weight: 700;
   font-size: 48px;
-  line-height: 1.5;
   text-align: center;
 
   &:not(:last-child) {

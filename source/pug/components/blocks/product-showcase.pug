@@ -1,0 +1,13 @@
+mixin product-showcase(products = [], title = "Новинки", link = { href: "#", title: "Все новинки" })
+
+  section.product-showcase
+    .container
+      +section-header(title, link)
+      .product-showcase__products
+        .product-showcase__products-inner.swiper
+          ul.product-showcase__product-list.swiper-wrapper
+            each product in products
+              li.product-showcase__product-item.swiper-slide
+                +product-card(product)
+        +btn({ iconBefore: ["icon-chevron", 40, 40]}).btn--icon.slider-btn.slider-btn--prev
+        +btn({ iconBefore: ["icon-chevron", 40, 40]}).btn--icon.slider-btn.slider-btn--next

@@ -1,0 +1,23 @@
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  &--prev {
+    left: calc(-1 * var(--container-padding-x));
+    transform: rotate(90deg);
+  }
+
+  &--next {
+    right: calc(-1 * var(--container-padding-x));
+    transform: rotate(-90deg);
+  }
+
+  &:disabled {
+    display: none;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}

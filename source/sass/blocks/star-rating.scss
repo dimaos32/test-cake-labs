@@ -1,0 +1,30 @@
+.star-rating {
+  position: relative;
+  width: 100px;
+  height: 16px;
+}
+
+.star-rating__background {
+  width: 100px;
+  padding: 2px;
+  color: $color-star-rating-bg;
+}
+
+.star-rating__stars {
+  display: flex;
+  gap: 4px;
+  width: 96px;
+  height: 16px;
+}
+
+.star-rating__rating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  padding: 2px;
+
+  color: $color-site-primary;
+
+  overflow: hidden;
+}

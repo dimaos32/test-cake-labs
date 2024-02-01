@@ -1,0 +1,8 @@
+mixin section-header(title = "", link)
+
+  .section-header
+    h2.section-header__title= title
+    if link
+      +link(link).section-header__link
+        span.section-header__link-text= link.title
+        +icon("icon-chevron", 24, 24).section-header__linc-icon

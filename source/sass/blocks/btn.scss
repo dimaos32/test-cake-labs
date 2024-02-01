@@ -82,4 +82,21 @@
       background-color: $color-transparent;
     }
   }
+
+  &--in-card {
+    min-width: unset;
+    width: 100%;
+
+    color: $color-site-secondary;
+
+    background-color: $color-default-white;
+    border-color: $color-site-secondary;
+
+    @include hover-focus {
+      color: $color-default-white;
+
+      background-color: $color-site-primary;
+      border-color: $color-site-primary;
+    }
+  }
 }

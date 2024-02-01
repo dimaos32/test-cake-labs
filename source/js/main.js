@@ -1,5 +1,7 @@
 import { mobileVhFix } from './utils/mobile-vh-fix';
 
+import { initProductShowcaseSlider } from './modules/sliders/product-showcase';
+
 // import { initModals } from './modules/modals/init-modals';
 import { initCatalogMenu } from './modules/init-catalog-menu';
 import { initToggleSearchForm } from './modules/init-toggle-search-form';
@@ -12,6 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   mobileVhFix();
+
+  initProductShowcaseSlider();
 
   // Modules
   // ---------------------------------

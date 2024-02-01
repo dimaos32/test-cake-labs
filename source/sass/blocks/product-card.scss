@@ -1,0 +1,135 @@
+.product-card {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+
+  background-color: $color-product-card-bg;
+  border-radius: 4px;
+}
+
+.product-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  background-color: $color-product-card-bg;
+  border-radius: 4px;
+  box-shadow: $product-card-shadow;
+
+  overflow: hidden;
+
+  transition: box-shadow $trans-default;
+
+  @include hover-focus {
+    color: $color-site-txt;
+
+    box-shadow: $product-card-shadow-action;
+  }
+}
+
+.product-card__cover {
+  width: 100%;
+  position: relative;
+}
+
+.product-card__cover-img {
+  width: 100%;
+  height: 160px;
+
+  object-fit: contain;
+}
+
+.product-card__badge {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 56px;
+  height: 32px;
+  margin: 0;
+  padding: 4px 8px;
+
+  color: $color-default-white;
+
+  background-color: $color-site-primary;
+  border-radius: 4px;
+}
+
+.product-card__data {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  padding-bottom: 56px;
+}
+
+.product-card__price-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card__price {
+  min-height: 45px;
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  text-align: left;
+}
+
+.product-card__price-value {
+  display: block;
+}
+
+.product-card__price-type {
+  display: block;
+
+  font-size: 12px;
+  font-weight: 400;
+  color: $color-product-card-txt-alt;
+}
+
+.product-card__old-price {
+  align-self: flex-end;
+  margin: 0;
+
+  color: $color-zambezi;
+  text-align: right;
+}
+
+.product-card__title {
+  // eslint-disable-next-line
+  -webkit-line-clamp: 2;
+  /* stylelint-disable-line */
+  display: -webkit-box;
+  // eslint-disable-next-next-line
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  margin: 0;
+  margin-bottom: auto;
+
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.product-card__action-wrapper {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+}
+
+.product-card__favorite-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+
+  &.is-favorite {
+    color: $color-site-primary;
+
+    @include hover-focus {
+      color: $color-site-txt;
+    }
+  }
+}
