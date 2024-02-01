@@ -10,6 +10,7 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
+$color-nero:                        #232323;
 $color-charcoal:                    #414141;
 
 $color-floral-white:                #fbf8ec;
@@ -29,6 +30,7 @@ $color-site-txt:                    $color-charcoal;
 $color-site-bg:                     $color-floral-white;
 
 $color-header-bg:                   $color-default-white;
+$color-header-username-txt:         $color-nero;
 
 $color-banner-bg:                   $color-default-white;
 
