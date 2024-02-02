@@ -94,6 +94,7 @@
 
   @include hover-focus {
     .nav__user-menu {
+      transform: translateY(0);
       visibility: visible;
       opacity: 1;
     }
@@ -101,6 +102,7 @@
 
   &:focus-within {
     .nav__user-menu {
+      transform: translateY(0);
       visibility: visible;
       opacity: 1;
     }
@@ -178,6 +180,7 @@
   position: absolute;
   top: 100%;
   right: 0;
+  transform: translateY(15px);
 
   width: max-content;
   max-width: 250px;
@@ -185,6 +188,11 @@
 
   visibility: hidden;
   opacity: 0;
+
+  transition:
+    transform $trans-default,
+    visibility $trans-default,
+    opacity $trans-default;
 
   background-color: $color-default-white;
   border-radius: 4px;

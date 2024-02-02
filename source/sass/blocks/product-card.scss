@@ -3,7 +3,7 @@
   height: 100%;
   max-width: 400px;
 
-  background-color: $color-product-card-bg;
+  background-color: $color-card-bg;
   border-radius: 4px;
 }
 
@@ -12,9 +12,9 @@
   flex-direction: column;
   height: 100%;
 
-  background-color: $color-product-card-bg;
+  background-color: $color-card-bg;
   border-radius: 4px;
-  box-shadow: $product-card-shadow;
+  box-shadow: $card-shadow;
 
   overflow: hidden;
 
@@ -23,7 +23,7 @@
   @include hover-focus {
     color: $color-site-txt;
 
-    box-shadow: $product-card-shadow-action;
+    box-shadow: $card-shadow-action;
   }
 }
 
@@ -86,7 +86,7 @@
 
   font-size: 12px;
   font-weight: 400;
-  color: $color-product-card-txt-alt;
+  color: $color-card-txt-alt;
 }
 
 .product-card__old-price {

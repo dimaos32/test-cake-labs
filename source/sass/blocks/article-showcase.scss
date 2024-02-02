@@ -1,4 +1,4 @@
-.product-showcase__header {
+.article-showcase__header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -16,19 +16,19 @@
   }
 }
 
-.product-showcase__products {
+.article-showcase__articles {
   margin: calc(-1 * var(--container-padding-x));
   position: relative;
 }
 
-.product-showcase__products-inner {
+.article-showcase__articles-inner {
   padding: var(--container-padding-x);
 }
 
-.product-showcase__product-list {
+.article-showcase__article-list {
   @include clear-list;
 }
 
-.product-showcase__product-item {
+.article-showcase__article-item {
   height: unset;
 }

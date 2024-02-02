@@ -13,6 +13,7 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 $color-nero:                        #232323;
 $color-charcoal:                    #414141;
 $color-zambezi:                     #606060;
+$color-sua-grey:                    #8f8f8f;
 $color-silver:                      #bfbfbf;
 $color-hint-of-red:                 #f3f2f1;
 
@@ -39,8 +40,10 @@ $color-header-username-txt:         $color-nero;
 
 $color-banner-bg:                   $color-default-white;
 
-$color-product-card-bg:             $color-default-white;
-$color-product-card-txt-alt:        $color-silver;
+$color-card-bg:                     $color-default-white;
+$color-card-txt-alt:                $color-silver;
+$color-card-date-txt:               $color-sua-grey;
+
 $color-star-rating-bg:              $color-silver;
 
 $color-map-bg:                      $color-off-yellow;
@@ -59,9 +62,9 @@ $header-user-menu-shadow:
   1px 2px 4px 0 rgba($color: $color-default-black, $alpha: 0.1);
 $footer-social-link-shadow:
   0 0 4px $color-site-primary;
-$product-card-shadow:
+$card-shadow:
   1px 2px 4px 0 rgba($color: $color-default-black, $alpha: 0.1);
-$product-card-shadow-action:
+$card-shadow-action:
   4px 8px 16px 0 rgba($color: $color-site-primary, $alpha: 0.2);
 $special-offer-link-primary:
   0 8px 16px 0 rgba($color: $color-site-primary-muted, $alpha: 0.5);

@@ -1,0 +1,12 @@
+mixin article-card({ link, cover, date, title, lead })
+
+  +link(link).article-card
+    .article-card__cover
+      +img(...cover).article-card__cover-img
+    .article-card__data
+      p.article-card__date
+        - const { human, robot } = date
+        time(datetime=robot)= human
+      h3.article-card__title= title
+      p.article-card__lead= lead
+      p.btn.article-card__pseudo-btn Подробнее

@@ -1,0 +1,13 @@
+mixin article-showcase(articles = [], title = "Статьи", link = { href: "#", title: "Все статьи" })
+
+  section.article-showcase
+    .container
+      +section-header(title, link)
+      .article-showcase__articles
+        .article-showcase__articles-inner.swiper
+          ul.article-showcase__article-list.swiper-wrapper
+            each article in articles
+              li.article-showcase__article-item.swiper-slide
+                +article-card(article)
+        +btn({ iconBefore: ["icon-chevron", 40, 40]}).btn--icon.slider-btn.slider-btn--prev
+        +btn({ iconBefore: ["icon-chevron", 40, 40]}).btn--icon.slider-btn.slider-btn--next

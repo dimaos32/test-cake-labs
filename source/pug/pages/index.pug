@@ -31,6 +31,12 @@ block variables
       products[7],
     ]
 
+    const currentArticles = [
+      articles[0],
+      articles[1],
+      articles[2],
+    ]
+
 block main
   h1.visually-hidden Наш прекрасный магазин
   main
@@ -42,6 +48,7 @@ block main
     +product-showcase(productPurchased, "Акции", { href: "#", title: "Все покупки" })
     +special-offers()
     +stores-on-the-map()
+    +article-showcase(currentArticles)
 
 //- block modals
 
