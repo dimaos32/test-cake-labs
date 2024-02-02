@@ -99,4 +99,32 @@
       border-color: $color-site-primary;
     }
   }
+
+  &--location {
+    min-width: unset;
+    min-height: 32px;
+    padding: 6px 13px;
+
+    font-size: 12px;
+    color: $color-zambezi;
+
+    background-color: $color-hint-of-red;
+    border-color: $color-hint-of-red;
+
+    &.is-active {
+      color: $color-default-white;
+
+      background-color: $color-site-secondary;
+      border-color: $color-site-secondary;
+
+      pointer-events: none;
+    }
+
+    @include hover-focus {
+      color: $color-default-white;
+
+      background-color: $color-site-primary;
+      border-color: $color-site-primary;
+    }
+  }
 }

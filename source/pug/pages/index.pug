@@ -41,5 +41,11 @@ block main
     +product-showcase(productNew)
     +product-showcase(productPurchased, "Акции", { href: "#", title: "Все покупки" })
     +special-offers()
+    +stores-on-the-map()
 
-block modals
+//- block modals
+
+append scripts
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+  script
+    include ./../../js/inline/map.js

@@ -1,0 +1,31 @@
+mixin stores-on-the-map()
+
+  -
+    const stores = [
+      {
+        location: "п.Щельяюр",
+        coords: [65.325869, 53.417914],
+      },
+      {
+        location: "д.Вертеп",
+        coords: [65.298894, 53.204025],
+      },
+      {
+        location: "с.Краснобор",
+        coords: [65.294898, 53.285251],
+      },
+      {
+        location: "д.Диюр",
+        coords: [65.277609, 53.359892],
+      },
+    ]
+
+  section.stores-on-the-map
+    .container
+      +section-header("Наши магазины")
+      ul.stores-on-the-map__stores
+        each store, index in stores
+          - const { location, coords } = store
+          li.stores-on-the-map__store
+            +btn({ text: location }).btn--location.stores-on-the-map__store-btn(class= {"is-active": index === 0}, data-coords= coords)
+      .stores-on-the-map__map#map

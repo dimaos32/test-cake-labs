@@ -46,12 +46,12 @@
 }
 
 .product-showcase__products {
-  margin: -10px;
+  margin: calc(-1 * var(--container-padding-x));
   position: relative;
 }
 
 .product-showcase__products-inner {
-  padding: 10px;
+  padding: var(--container-padding-x);
 }
 
 .product-showcase__product-list {
