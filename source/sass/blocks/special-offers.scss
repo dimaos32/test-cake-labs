@@ -1,0 +1,141 @@
+.special-offers__list {
+  @include clear-list;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+
+  @include vp-1023 {
+    gap: 32px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  @include vp-575 {
+    gap: 16px;
+  }
+}
+
+.special-offers__link {
+  position: relative;
+  display: block;
+  min-height: 200px;
+  padding: 30px 40px;
+
+  background-color: $color-site-primary-muted;
+  border-radius: 4px;
+  box-shadow: none;
+
+  overflow: hidden;
+
+  transition: box-shadow $trans-default;
+
+  @include hover-focus {
+    color: $color-site-txt;
+
+    box-shadow: $special-offer-link-primary
+  }
+
+  &--secondary {
+    background-color: $color-site-secondary-muted;
+
+    @include hover-focus {
+      box-shadow: $special-offer-link-secondary;
+    }
+  }
+
+  &--money {
+    background-image: url("../img/site/money.svg");
+    background-repeat: no-repeat;
+    background-size: 558px 170px;
+    background-position: right 5px center;
+  }
+
+  @include vp-1023 {
+    min-height: 170px;
+    padding: 20px;
+
+    &--money {
+      background-image: url("../img/site/money.svg");
+      background-repeat: no-repeat;
+      background-size: 442px 136px;
+      background-position: right 5px center;
+    }
+  }
+
+  @include vp-767 {
+    max-width: 500px;
+  }
+}
+
+.special-offers__link-content {
+  position: relative;
+  z-index: 2;
+  max-width: 260px;
+
+  @include vp-1023 {
+    max-width: 175px;
+  }
+}
+
+.special-offers__link-title {
+  margin: 0;
+
+  font-size: 24px;
+
+  &:not(:last-child) {
+    margin-bottom: 6px;
+  }
+
+  @include vp-1023 {
+    font-size: 18px;
+  }
+}
+
+.special-offers__link-descr {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 6px;
+  }
+
+  @include vp-1023 {
+    font-size: 12px;
+  }
+}
+
+.special-offers__link-img {
+  position: absolute;
+  z-index: 1;
+
+  object-fit: contain;
+
+  &--money {
+    top: 0;
+    right: 5px;
+  }
+
+  &--cart {
+    top: 12px;
+    right: 40px;
+  }
+
+  @include vp-1023 {
+    &--money {
+      top: 10px;
+      right: -60px;
+      width: 248px;
+      height: 160px;
+    }
+
+    &--cart {
+      top: 35px;
+      right: 40px;
+      width: 132px;
+      height: 126px;
+    }
+  }
+}

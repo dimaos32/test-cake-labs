@@ -19,6 +19,7 @@ $color-floral-white:                #fbf8ec;
 $color-off-yellow:                  #f9f4e2;
 
 $color-outrageous-orange:           #ff6633;
+$color-tuft-bush:                   #fcd5ba;
 
 $color-mantis:                      #70c05b;
 $color-panache:                     #e5ffde;
@@ -26,6 +27,7 @@ $color-panache:                     #e5ffde;
 // Project colors
 
 $color-site-primary:                $color-outrageous-orange;
+$color-site-primary-muted:          $color-tuft-bush;
 $color-site-secondary:              $color-mantis;
 $color-site-secondary-muted:        $color-panache;
 $color-site-txt:                    $color-charcoal;
@@ -58,6 +60,10 @@ $product-card-shadow:
   1px 2px 4px 0 rgba($color: $color-default-black, $alpha: 0.1);
 $product-card-shadow-action:
   4px 8px 16px 0 rgba($color: $color-site-primary, $alpha: 0.2);
+$special-offer-link-primary:
+  0 8px 16px 0 rgba($color: $color-site-primary-muted, $alpha: 0.5);
+$special-offer-link-secondary:
+  0 8px 16px 0 rgba($color: $color-site-secondary-muted, $alpha: 0.5);
 
 // Typography
 // ---------------------------------

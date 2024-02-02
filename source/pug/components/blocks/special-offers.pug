@@ -1,0 +1,18 @@
+mixin special-offers()
+
+  section.special-offers
+    .container
+      +section-header("Специальные предложения")
+      ul.special-offers__list
+        li.special-offers__item
+          a.special-offers__link(href="#")
+            .special-offers__link-content
+              h3.special-offers__link-title Оформите карту «Северяночка»
+              p.special-offers__link-descr И получайте бонусы при покупке в магазинах и на сайте
+            +img("content", "loyality-card", "png", 310, 200).special-offers__link-img.special-offers__link-img--money
+        li.special-offers__item
+          a.special-offers__link.special-offers__link--secondary.special-offers__link--money(href="#")
+            .special-offers__link-content
+              h3.special-offers__link-title Покупайте акционные товары
+              p.special-offers__link-descr И получайте вдвое больше бонусов
+            +img("content", "cart", "png", 193, 186).special-offers__link-img.special-offers__link-img--cart
