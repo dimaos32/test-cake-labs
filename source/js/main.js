@@ -6,6 +6,7 @@ import { initArticleShowcaseSlider } from './modules/sliders/article-showcace';
 // import { initModals } from './modules/modals/init-modals';
 import { initCatalogMenu } from './modules/init-catalog-menu';
 import { initToggleSearchForm } from './modules/init-toggle-search-form';
+import { initFavoritesActions } from './modules/init-favorites-actions';
 
 // ---------------------------------
 
@@ -28,6 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // initModals();
     initCatalogMenu();
     initToggleSearchForm();
+    initFavoritesActions();
   });
 });
 
